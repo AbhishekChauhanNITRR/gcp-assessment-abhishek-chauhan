@@ -19,6 +19,7 @@ def generate_rag_response(prompt: str, context: str, source_citation: str = None
             model="gemini-3.6-flash",
             contents=full_prompt,
         )
+
         return response.text
     except Exception as e:
         return f"[GEMINI ERROR]: {str(e)}\n\nContext Data: {context}"
